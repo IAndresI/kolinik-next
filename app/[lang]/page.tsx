@@ -45,7 +45,9 @@ export default function Home() {
                 <div className="information__title">
                   {t("Preview.schedule")}
                 </div>
-                <time className="information__text">08:30 am to 05:00 pm</time>
+                <time className="information__text">
+                  {t("Preview.scheduleTime")}
+                </time>
               </div>
             </div>
             <div className="information__item">
@@ -80,13 +82,8 @@ export default function Home() {
       <section className="department" id="department">
         <div className="container">
           <div className="department__title title title--special">
-            <div className="title__main">Our Departments Best For You</div>
-            <p className="title__text">
-              Lorem ipsum dolor sit amet, nunc sodales massa turpis cursus
-              iaculis, ur nam. Ultricies sapien fusce vitae duis, ut torquent a.
-              Pede nec libero tristique, eget fusce, quis lorem vel tortor
-              lacinia amet.
-            </p>
+            <div className="title__main">{t("OurDepartments.title")}</div>
+            <p className="title__text">{t("OurDepartments.subTitle")}</p>
           </div>
           <div className="department__inner">
             <CustomTabs />
@@ -116,19 +113,11 @@ export default function Home() {
             </div>
             <div className="theatre__description">
               <div className="review__title title title--special-2">
-                <div className="title__main">
-                  World Best Operation Theatre In Here
-                </div>
+                <div className="title__main">{t("OperationTheatre.title")}</div>
               </div>
-              <p className="theatre__text">
-                Fusce gravida at dolor, in blandit mi morbi donec metupendisse
-                diam morbi dui, ut tortor ullamcorper porta ac, aliquet duis
-                velit malesuada. Molestie elit soluta felis. Sed eu purus quam
-                faubus cras maecenas quam pede. Nullam vehicula arcu
-                pellentesque sed, et vestibulum at eu, dictumst egestas.
-              </p>
+              <p className="theatre__text">{t("OperationTheatre.subTitle")}</p>
               <a href="#" className="theatre__link link">
-                read more
+                {t("OperationTheatre.link")}
               </a>
             </div>
           </div>
@@ -148,7 +137,7 @@ export default function Home() {
                   duration={2.75}
                 />
               </div>
-              <div className="statistic__name">Total Starf</div>
+              <div className="statistic__name">{t("RunningNumbers.Starf")}</div>
             </li>
             <li className="statistic__item">
               <div className="statistic__counter-container">
@@ -160,7 +149,7 @@ export default function Home() {
                   duration={2.75}
                 />
               </div>
-              <div className="statistic__name">Patients Bed</div>
+              <div className="statistic__name">{t("RunningNumbers.Bed")}</div>
             </li>
             <li className="statistic__item">
               <div className="statistic__counter-container">
@@ -172,7 +161,9 @@ export default function Home() {
                   duration={2.75}
                 />
               </div>
-              <div className="statistic__name">Consultation Room</div>
+              <div className="statistic__name">
+                {t("RunningNumbers.Consultation")}
+              </div>
             </li>
             <li className="statistic__item">
               <div className="statistic__counter-container">
@@ -184,7 +175,7 @@ export default function Home() {
                   duration={2.75}
                 />
               </div>
-              <div className="statistic__name">ICU Support </div>
+              <div className="statistic__name">{t("RunningNumbers.ICU")}</div>
             </li>
           </ul>
         </div>

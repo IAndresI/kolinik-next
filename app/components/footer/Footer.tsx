@@ -6,10 +6,13 @@ import meteor from "@/app/assets/footer/meteor.png";
 import videocreek from "@/app/assets/footer/videocreek.png";
 import behance from "@/app/assets/footer/behance.png";
 import laborator from "@/app/assets/footer/laborator.png";
+import { useTranslations } from "next-intl";
 
 type Props = {};
 
 export const Footer = (props: Props) => {
+  const t = useTranslations("Footer");
+
   return (
     <footer className="footer">
       <div className="footer__inner">
@@ -56,129 +59,125 @@ export const Footer = (props: Props) => {
           </div>
           <div className="footer__content">
             <div className="footer__item footer__item--lg">
-              <div className="footer__title">About Company</div>
-              <p className="footer__text">
-                Penatibus in, litora dictumst suspendamuanim egestas, libero
-                mollis molestiae sit et sem nisl inquam vitae
-                euismoellentesque.nd this is over head.
-              </p>
+              <div className="footer__title">{t("About.title")}</div>
+              <p className="footer__text">{t("About.text")}</p>
             </div>
             <div className="footer__item footer__item">
-              <div className="footer__title">Useful Link</div>
+              <div className="footer__title">{t("UsefulLink.title")}</div>
               <ul className="footer__list list">
                 <li className="footer__list-item">
                   <Link href="/about" className="footer__link link">
-                    About{" "}
+                    {t("UsefulLink.About")}
                   </Link>{" "}
                 </li>
                 <li className="footer__list-item">
                   <Link href="/service1" className="footer__link link">
-                    Our Services{" "}
+                    {t("UsefulLink.OurServices")}
                   </Link>{" "}
                 </li>
                 <li className="footer__list-item">
                   <Link href="/mission" className="footer__link link">
-                    Company Mission
+                    {t("UsefulLink.CompanyMission")}
                   </Link>{" "}
                 </li>
                 <li className="footer__list-item">
                   <Link href="/doctors" className="footer__link link">
-                    Find Doctor{" "}
+                    {t("UsefulLink.FindDoctor")}
                   </Link>{" "}
                 </li>
                 <li className="footer__list-item">
                   <a href="#appointment" className="footer__link link">
-                    Appointment{" "}
+                    {t("UsefulLink.Appointment")}
                   </a>{" "}
                 </li>
               </ul>
             </div>
             <div className="footer__item footer__item">
-              <div className="footer__title">Our Services</div>
+              <div className="footer__title">{t("OurServices.title")}</div>
               <ul className="footer__list list">
                 <li className="footer__list-item">
                   <a href="#department" className="footer__link link">
-                    Cardiology{" "}
+                    {t("OurServices.Cardiology")}
                   </a>{" "}
                 </li>
                 <li className="footer__list-item">
                   <a href="#department" className="footer__link link">
-                    Outpatient{" "}
+                    {t("OurServices.Outpatient")}
                   </a>{" "}
                 </li>
                 <li className="footer__list-item">
                   <a href="#department" className="footer__link link">
-                    Gynaecological
+                    {t("OurServices.Gynaecological")}
                   </a>{" "}
                 </li>
                 <li className="footer__list-item">
                   <a href="#department" className="footer__link link">
-                    Dental Surgery
+                    {t("OurServices.DentalSurgery")}
                   </a>{" "}
                 </li>
                 <li className="footer__list-item">
                   <a href="#department" className="footer__link link">
-                    Laboratory{" "}
+                    {t("OurServices.Laboratory")}
                   </a>{" "}
                 </li>
               </ul>
             </div>
             <div className="footer__item footer__item">
-              <div className="footer__title">Terms</div>
+              <div className="footer__title">{t("Terms.title")}</div>
               <ul className="footer__list list">
                 <li className="footer__list-item">
                   <Link href="/privacy" className="footer__link link">
-                    Announcement{" "}
+                    {t("Terms.Announcement")}
                   </Link>{" "}
                 </li>
                 <li className="footer__list-item">
                   <Link href="/privacy" className="footer__link link">
-                    Privacy Policy{" "}
+                    {t("Terms.PrivacyPolicy")}
                   </Link>{" "}
                 </li>
                 <li className="footer__list-item">
                   <Link href="/privacy" className="footer__link link">
-                    Terms Of Service
+                    {t("Terms.TermsOfService")}
                   </Link>
                 </li>
                 <li className="footer__list-item">
                   <Link href="/privacy" className="footer__link link">
-                    Refund Policy{" "}
+                    {t("Terms.RefundPolicy")}
                   </Link>{" "}
                 </li>
                 <li className="footer__list-item">
                   <Link href="/privacy" className="footer__link link">
-                    Licences Info{" "}
+                    {t("Terms.LicencesInfo")}
                   </Link>{" "}
                 </li>
               </ul>
             </div>
             <div className="footer__item footer__item">
-              <div className="footer__title">Support</div>
+              <div className="footer__title">{t("Support.title")}</div>
               <ul className="footer__list list">
                 <li className="footer__list-item">
                   <Link href="/faq" className="footer__link link">
-                    F.A.Q{" "}
+                    {t("Support.FAQ")}
                   </Link>{" "}
                 </li>
                 <li className="footer__list-item">
                   <Link href="/contact" className="footer__link link">
-                    Get Support
+                    {t("Support.GetSupport")}
                   </Link>{" "}
                 </li>
                 <li className="footer__list-item">
                   <Link href="/blog" className="footer__link link">
-                    Our Forum{" "}
+                    {t("Support.OurForum")}
                   </Link>{" "}
                 </li>
                 <li className="footer__list-item">
                   <Link href="/blog" className="footer__link link">
-                    Member Area
+                    {t("Support.MemberArea")}
                   </Link>{" "}
                 </li>
                 <li className="footer__list-item">
                   <Link href="/contact" className="footer__link link">
-                    Contact Us{" "}
+                    {t("Support.ContactUs")}
                   </Link>{" "}
                 </li>
               </ul>
@@ -187,7 +186,7 @@ export const Footer = (props: Props) => {
         </div>
       </div>
       <div className="footer__rights">
-        Copyright © {new Date().getFullYear()}. All rights reserved
+        {t("Copyright", { year: new Date().getFullYear() })}
       </div>
     </footer>
   );

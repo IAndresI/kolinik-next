@@ -23,8 +23,96 @@
       "learnMore": "learn more",
       "address": "Offices address",
       "schedule": "Friday to Satday",
+      "scheduleTime": "08:30 am to 05:00 pm",
       "email": "Email Address"
+    },
+    "OurExpert": {
+      "title": "Our Expert Doctor",
+      "subTitle": "Patients are treated by qualified doctors who have a long practice and wide knowledge in their field."
+    },
+    "OurDepartments": {
+      "title": "Our Departments Best For You",
+      "subTitle": "The medical center operates in the format of a global family clinic. The scope of our activities includes all types of medical care: diagnosis, treatment, recovery and prevention."
+    },
+    "Tabs": {
+      "Dental": {
+        "title": "Dental",
+        "description": "A consultation with a dentist takes place in a pleasant, relaxed atmosphere. At the initial consultation, you will be offered all possible treatment options, from which you can choose the most suitable one.",
+        "advantages": {
+          "1": "Full range of diagnostic equipment",
+          "2": "Accurate diagnoses and treatment plans",
+          "3": "The most modern equipment",
+          "4": "Proven methods and effective methods of pain relief",
+          "5": "Electronic anesthesia"
+        }
+      },
+      "Gynecology": {
+        "title": "Gynecology",
+        "description": "KOLINIC employs highly qualified gynecologists with extensive experience in treating diseases of the female reproductive system: inflammatory and hormonal diseases, sexual conditions, pathologies of internal organs, age-related changes in the female condition, and others.",
+        "advantages": {
+          "1": "High level of expertise",
+          "2": "Application of modern technologies and knowledge in practice",
+          "3": "A wide range of areas of gynecology"
+        }
+      },
+      "Laboratory": {
+        "title": "Laboratory",
+        "description": "The network of multidisciplinary medical centers KOLINIK maintains its own laboratory.",
+        "advantages": {
+          "1": "High-precision equipment of the latest generation",
+          "2": "Research in automatic mode and in the shortest possible time",
+          "3": "The minimum probability of errors due to the 'human factor'",
+          "4": "Strict quality control"
+        }
+      },
+      "Cardiology": {
+        "title": "Cardiology",
+        "description": "KOLINIK cardiologists successfully treat a wide range of cardiovascular diseases, which include diseases of the heart vessels, arteries and veins, many of which lead to circulatory failure and serious complications, heart attacks and strokes.",
+        "advantages": {
+          "1": "Diagnostics and treatment of cardiovascular diseases",
+          "2": "Cardiologists of the highest category, candidates of medical sciences"
+        }
+      },
+      "Emergency": {
+        "title": "Emergency",
+        "description": "KOLINIK provides the following services for the provision of emergency medical care, medical support and transportation of patients:",
+        "advantages": {
+          "1": "24/7 call reception",
+          "2": "Medical staff with vast experience",
+          "3": "Modern ambulances",
+          "4": "Wide range of services",
+          "5": "Modern equipment for emergency diagnostics",
+          "6": "All drugs needed for urgent home treatment"
+        }
+      }
+    },
+    "Sale": {
+      "title": "30% Off Any Diagnostic Let's Check",
+      "subTitle": "You can get upto 30% off for 45 days in here! So Contact with Us",
+      "link": "get services"
+    },
+
+    "OperationTheatre": {
+      "title": "World Best Operation Theatre In Here",
+      "subTitle": "More than 3,500 qualified doctors of various specialties work in the medical centers of 'KOLINIK', including 202 candidates of medical sciences, 26 doctors of medical sciences, 17 professors, 2 academicians of the Russian Academy of Medical Sciences, 9 associate professors and senior researchers.",
+      "link": "read more"
+    },
+    "RunningNumbers": {
+      "Starf": "Total Starf",
+      "Bed": "Patients Bed",
+      "Consultation": "Consultation Room",
+      "ICU": "ICU Support"
     }
+  },
+  "Review": {
+    "title": "Client Testimonial",
+    "subTitle": "Reviews about the clinic and doctors 'KOLINIK'"
+  },
+  "Pricing": {
+    "title": "Choose Pricing Plan",
+    "subTitle": "With a monthly subscription plan, you can always feel secure, anytime!",
+    "period": "Month",
+    "link": "buy now"
   },
   "Appointment": {
     "title": "Book Appointment",
@@ -61,6 +149,49 @@
         "title": "Laboratory Analysis",
         "description": "Laboratory diagnostics in our clinic includes a wide range of studies. The Medical Diagnostic Center collects all the main tests (blood, feces, urine, seminal fluid in men and more than a thousand paid services and studies)."
       }
+    }
+  },
+  "News": {
+    "By": "By",
+    "link": "read more"
+  },
+  "Footer": {
+    "About": {
+      "title": "About Company",
+      "text": "Cooperation with leading research institutes and medical faculties of the largest universities in the country, studying and adapting foreign experience, introducing the latest medical techniques and service technologies. In 2017, the RUDN University Clinic was established on the basis of the Holding."
+    },
+    "Copyright": "Copyright © {year}. All rights reserved",
+    "UsefulLink": {
+      "title": "Useful Links",
+      "About": "About",
+      "OurServices": "Our Services",
+      "CompanyMission": "Company Mission",
+      "FindDoctor": "Find Doctor",
+      "Appointment": "Appointment"
+    },
+    "OurServices": {
+      "title": "Our Services",
+      "Cardiology": "Cardiology",
+      "Outpatient": "Outpatient",
+      "Gynaecological": "Gynaecological",
+      "DentalSurgery": "Dental Surgery",
+      "Laboratory": "Laboratory"
+    },
+    "Terms": {
+      "title": "Terms",
+      "Announcement": "Announcement",
+      "PrivacyPolicy": "Privacy Policy",
+      "TermsOfService": "Terms Of Service",
+      "RefundPolicy": "Refund Policy",
+      "LicencesInfo": "Licences Info"
+    },
+    "Support": {
+      "title": "Support",
+      "FAQ": "F.A.Q",
+      "GetSupport": "Get Support",
+      "OurForum": "Our Forum",
+      "MemberArea": "Member Area",
+      "ContactUs": "Contact Us"
     }
   }
 }

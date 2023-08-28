@@ -1,22 +1,22 @@
 import doctor1 from "@/app/assets/doctors/doctor1.png";
 import doctor2 from "@/app/assets/doctors/doctor2.png";
 import doctor3 from "@/app/assets/doctors/doctor3.png";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
 interface IOurDoctorsProps {}
 
 export const OurDoctors = (props: IOurDoctorsProps) => {
+  const t = useTranslations("Index.OurExpert");
+
   return (
     <section className="doctors">
       <div className="container">
         <div className="doctors__title title">
           <div className="doctors__title title">
-            <div className="title__main">Our Expert Doctor</div>
-            <p className="title__text">
-              Condimentum rutrum placerat egestas condimentum mi eros. Eleifend
-              cras quirntum Feugiat elit placerat. Diam tempor malesuada.
-            </p>
+            <div className="title__main">{t("title")}</div>
+            <p className="title__text">{t("subTitle")}</p>
           </div>
         </div>
         <ul className="doctors__list list">

@@ -1855,6 +1855,7 @@
 
   &__bg-image {
     height: 100%;
+    object-fit: cover;
   }
 
   &__description {
@@ -2632,6 +2633,7 @@
     display: block;
     transition: all 0.5s;
     position: relative;
+    word-wrap: break-word;
 
     &:hover,
     &:focus {

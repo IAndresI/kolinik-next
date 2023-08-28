@@ -1,22 +1,23 @@
+import { useTranslations } from "next-intl";
+
 interface IPricingPlanProps {}
 
 export const PricingPlan = (props: IPricingPlanProps) => {
+  const t = useTranslations("Pricing");
+
   return (
     <section className="plan">
       <div className="container">
         <div className="plan__title title">
-          <div className="title__main">Choose Pricing Plan</div>
-          <p className="title__text">
-            Condimentum rutrum placerat egestas condimentum mi eros. Eleifend
-            cras quirntum Feugiat elit placerat. Diam tempor malesuada.
-          </p>
+          <div className="title__main">{t("title")}</div>
+          <p className="title__text">{t("subTitle")}</p>
         </div>
         <ul className="plan__list list">
           <li className="plan__item">
             <div className="plan__header">
               <div className="plan__name">Basic</div>
               <div className="plan__price">
-                57<span className="plan__postfix">/Month</span>
+                57<span className="plan__postfix">/{t("period")}</span>
               </div>
             </div>
             <ul className="plan__advantage-list list">
@@ -30,14 +31,14 @@ export const PricingPlan = (props: IPricingPlanProps) => {
               </li>
             </ul>
             <a href="#" className="plan__link link">
-              buy now
+              {t("link")}
             </a>
           </li>
           <li className="plan__item">
             <div className="plan__header">
               <div className="plan__name">Standart</div>
               <div className="plan__price">
-                86<span className="plan__postfix">/Month</span>
+                86<span className="plan__postfix">/{t("period")}</span>
               </div>
             </div>
             <ul className="plan__advantage-list list">
@@ -51,14 +52,14 @@ export const PricingPlan = (props: IPricingPlanProps) => {
               </li>
             </ul>
             <a href="#" className="plan__link link">
-              buy now
+              {t("link")}
             </a>
           </li>
           <li className="plan__item">
             <div className="plan__header">
               <div className="plan__name">Premium</div>
               <div className="plan__price">
-                98<span className="plan__postfix">/Yearly</span>
+                98<span className="plan__postfix">/{t("period")}</span>
               </div>
             </div>
             <ul className="plan__advantage-list list">
@@ -72,7 +73,7 @@ export const PricingPlan = (props: IPricingPlanProps) => {
               </li>
             </ul>
             <a href="#" className="plan__link link">
-              buy now
+              {t("link")}
             </a>
           </li>
         </ul>
