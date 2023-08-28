@@ -1,0 +1,66 @@
+{
+  "Header": {
+    "location": "Location",
+    "phone": "hotline",
+    "email": "Email Address",
+    "links": {
+      "home": "home",
+      "about": "about",
+      "service": "service",
+      "doctor": "doctor",
+      "blog": "blog",
+      "contact": "contact",
+      "givingBack": "giving back",
+      "mission": "mission",
+      "timeline": "timeline"
+    }
+  },
+  "Index": {
+    "Preview": {
+      "title": "Meet with your best doctor here",
+      "subTitle": "The high quality of medical care provided is the main priority of our work. Our medical center is constantly improving the management and quality control system, introducing best practices, taking into account the wishes and feedback of patients.",
+      "appointment": "appointment",
+      "learnMore": "learn more",
+      "address": "Offices address",
+      "schedule": "Friday to Satday",
+      "email": "Email Address"
+    }
+  },
+  "Appointment": {
+    "title": "Book Appointment",
+    "fullName": "Full Name",
+    "phone": "Phone",
+    "date": "Date",
+    "button": "book your appointment"
+  },
+  "Services": {
+    "title": "Our Services",
+    "subTitle": "The medical center operates in the format of a universal family clinic. The scope of our activities includes all types of medical care: diagnosis, treatment, recovery and prevention.",
+    "list": {
+      "cardiology": {
+        "title": "Cardiology",
+        "description": "Our doctors have all the possibilities for the diagnosis, treatment and prevention of pathologies of the cardiovascular system. The clinic has modern equipment for a quick and accurate diagnosis."
+      },
+      "dental": {
+        "title": "Dental Surgery",
+        "description": "Our medical center offers modern methods of treating caries and other dental diseases in adults and children. Here you can take advantage of the latest achievements in the field of dentistry."
+      },
+      "ophtalmology": {
+        "title": "Ophtalmology",
+        "description": "Our specialists with many years of experience monitor the implementation of the latest treatment methods in the field of ophthalmology. The technical base is represented by the latest generation medical equipment."
+      },
+      "outpatient": {
+        "title": "Outpatient Surgery",
+        "description": "Thanks to the experience of doctors and modern equipment in the outpatient surgical department of our clinic, we are able to perform even complex operations and provide maximum patient comfort."
+      },
+      "gynaecological": {
+        "title": "Gynaecological",
+        "description": "The use of expert-class equipment allows you to accurately establish the diagnosis and identify pathologies at the initial stages. The health of the future generation depends on women's health, which is why our clinic pays special attention."
+      },
+      "analysis": {
+        "title": "Laboratory Analysis",
+        "description": "Laboratory diagnostics in our clinic includes a wide range of studies. The Medical Diagnostic Center collects all the main tests (blood, feces, urine, seminal fluid in men and more than a thousand paid services and studies)."
+      }
+    }
+  }
+}
