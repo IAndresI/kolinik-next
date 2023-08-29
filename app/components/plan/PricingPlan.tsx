@@ -1,12 +1,13 @@
+import { IDivProps } from "@/app/types";
 import { useTranslations } from "next-intl";
 
-interface IPricingPlanProps {}
+interface IPricingPlanProps extends IDivProps {}
 
 export const PricingPlan = (props: IPricingPlanProps) => {
   const t = useTranslations("Pricing");
 
   return (
-    <section className="plan">
+    <section className={`plan ${props.className}`}>
       <div className="container">
         <div className="plan__title title">
           <div className="title__main">{t("title")}</div>

@@ -5,14 +5,15 @@ import servicesCardiology from "@/app/assets/services-item/cardiology.png";
 import servicesOutpatient from "@/app/assets/services-item/outpatient.png";
 import servicesLaboratory from "@/app/assets/services-item/laboratory.png";
 import { useTranslations } from "next-intl";
+import { IDivProps } from "@/app/types";
 
-interface IServicesProps {}
+interface IServicesProps extends IDivProps {}
 
-export const Services = (props: IServicesProps) => {
+export const Services = ({ className, ...props }: IServicesProps) => {
   const t = useTranslations("Services");
 
   return (
-    <section className="services">
+    <section className={`services ${className}`} {...props}>
       <div className="container">
         <div className="services__title title">
           <div className="title__main">{t("title")}</div>

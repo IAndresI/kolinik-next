@@ -30,3 +30,14 @@ export const reviewsArr: IReview[] = [
     text: "Pellentesque dictum diam. Vivamus pltenibh odio cras accusamus vitae dignissimos nulla volutpat nec, vel scelerisque vestibulum, integarcu lectus id maecenas.",
   },
 ];
+export const enum Breads {
+  home = "home",
+  about = "about",
+  service = "service",
+  doctor = "doctor",
+  blog = "blog",
+  contact = "contact",
+  givingBack = "givingBack",
+  mission = "mission",
+  timeline = "timeline",
+}

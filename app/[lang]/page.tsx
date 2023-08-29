@@ -9,8 +9,13 @@ import { Services } from "../components/service/Services";
 import { OurDoctors } from "../components/doctors/OurDoctors";
 import { PricingPlan } from "../components/plan/PricingPlan";
 import { News } from "../components/news/News";
-import { Appointment } from "../components/appointment/Appointment";
+import {
+  Appointment,
+  AppointmentForm,
+} from "../components/appointment/AppointmentForm";
 import { Sale } from "../components/sale/Sale";
+
+import doctorImage from "@/app/assets/appointment/doctor.png";
 
 export default function Home() {
   const t = useTranslations("Index");
@@ -76,7 +81,15 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Appointment />
+      <section
+        className={`appointment`}
+        id="appointment"
+        style={{ backgroundImage: `url(${doctorImage.src})` }}
+      >
+        <div className="container">
+          <AppointmentForm />
+        </div>
+      </section>
       <Services />
       <OurDoctors />
       <section className="department" id="department">

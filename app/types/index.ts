@@ -5,3 +5,5 @@ export interface IReview {
   authorPosition?: string;
   text: string;
 }
+
+export interface IDivProps extends React.HTMLAttributes<HTMLDivElement> {}

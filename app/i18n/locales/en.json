@@ -15,6 +15,27 @@
       "timeline": "timeline"
     }
   },
+  "Breadcrumps": {
+    "home": "home",
+    "about": "about",
+    "service": "service",
+    "doctor": "doctor",
+    "blog": "blog",
+    "contact": "contact",
+    "givingBack": "giving back",
+    "mission": "mission",
+    "timeline": "timeline"
+  },
+  "OurService": {
+    "title": "Our Service",
+    "GetHere": {
+      "title": "Why People Get Services From In Here?",
+      "desc1": "Our centers employ experienced specialists who treat each patient with attention. These are professionals who will become your partners in maintaining health.",
+      "desc2": "More than 4,000 qualified doctors of various specialties work in the medical centers of SM-Clinic, including more than 200 candidates of medical sciences, more than 20 doctors of medical sciences, 17 professors, 2 academicians of the Russian Academy of Medical Sciences, 9 associate professors and senior researchers.",
+      "desc3": "Our medical centers employ doctors of both the most sought-after medical specialties: general practitioners, cardiologists, urologists, gynecologists, ophthalmologists, otorhinolaryngologists, surgeons and others, as well as rare ones: geneticists, reproductive specialists, embryologists, hepatologists and others.",
+      "desc4": "Doctors specializing in the treatment of children from the first days of life to adulthood are receiving appointments in children's departments."
+    }
+  },
   "Index": {
     "Preview": {
       "title": "Meet with your best doctor here",
@@ -103,6 +124,33 @@
       "Consultation": "Consultation Room",
       "ICU": "ICU Support"
     }
+  },
+  "AboutUs": {
+    "title": "About Us",
+    "Provide": {
+      "title": "We Provided Best Service For Good Health",
+      "desc": "The clinic accepts adults and children from birth. Each patient is provided with the necessary qualified assistance in various fields of medicine.",
+      "beneitsTitle": "Benefits Of Services",
+      "beneitsDesc": "The KOLINIK Clinic employs international doctors who communicate fluently in English. Patients are ready to receive 22 departments and Competence Centers. In the modern operating block of the Clinic, high-tech operations are performed, there is a round-the-clock hospital for 28 beds, equipped with everything necessary for the comfort of patients.",
+      "advantages": {
+        "1": "High level of expertise",
+        "2": "Medical staff with extensive experience",
+        "3": "Modern ambulances",
+        "4": "Wide range of services"
+      }
+    },
+    "Expirience": {
+      "title": "30 Years More Services Experiences",
+      "desc": "Clinic KOLINIK is a family clinic, one of the leaders in private medicine, which is conveniently located in the historical center of St. Petersburg. Patients here have been receiving expert medical care for many years.",
+      "Progress": {
+        "heart": "Heart Surgery",
+        "lab": "Laborate Analysis",
+        "support": "Customer Support",
+        "research": "Medical Research"
+      }
+    },
+    "signUp": "Singup For Our Newsletter",
+    "signUpPlaceholder": "Enter Your Email Address"
   },
   "Review": {
     "title": "Client Testimonial",

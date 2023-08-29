@@ -1,4 +1,8 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { PricingPlan } from "@/app/components/plan/PricingPlan";
+import { Breadcrumps } from "@/app/components/breadcrumps/Breadcrumps";
+import { Breads } from "@/app/lib/constants";
 
 import provideSlide1 from "@/app/assets/provide/slide1.jpg";
 import provideSlide2 from "@/app/assets/provide/slide2.jpg";
@@ -11,44 +15,26 @@ import expirience4 from "@/app/assets/expirience/4.jpg";
 import news1 from "@/app/assets/news/1.jpg";
 import news2 from "@/app/assets/news/2.jpg";
 import news3 from "@/app/assets/news/3.png";
-import Link from "next/link";
-import { useTranslations } from "next-intl";
 
 export default function About() {
-  const t = useTranslations("Index");
+  const t = useTranslations("AboutUs");
 
   return (
     <div>
       <section className="preview preview--small">
-        <span className="preview__name">About Us</span>
+        <span className="preview__name">{t("title")}</span>
       </section>
-      <section className="breadcrumps">
-        <div className="container">
-          <ul className="breadcrumps__list list">
-            <li className="breadcrumps__item breadcrumps__item--home">
-              <Link className="breadcrumps__link link" href="/">
-                home
-              </Link>
-            </li>
-            <li className="breadcrumps__item breadcrumps__item--current">
-              <a className="breadcrumps__link link" href="#">
-                about
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <Breadcrumps
+        items={[
+          { label: Breads.home, link: "/" },
+          { label: Breads.about, link: "/about" },
+        ]}
+      />
       <section className="provide">
         <div className="container">
           <div className="provide__title title title--special">
-            <div className="title__main">
-              We Provided Best Service For Good Health
-            </div>
-            <p className="title__text">
-              Lorem ipsum dolor sit amet, nunc sodales massa turpis cursuialis
-              ur nam. Ultricies sapien fusce vitae duis, ut torquent a. Pede nec
-              libero tristique, eget fusce
-            </p>
+            <div className="title__main">{t("Provide.title")}</div>
+            <p className="title__text">{t("Provide.desc")}</p>
           </div>
           <div className="provide__inner">
             <div className="provide__slider">
@@ -89,111 +75,23 @@ export default function About() {
             </div>
             <div className="provide__description">
               <div className="provide__description-title title title--special-2">
-                <div className="title__main">Benefits Of Services</div>
+                <div className="title__main">{t("Provide.beneitsTitle")}</div>
               </div>
               <div className="provide__text text">
-                Ridiculus elit amet sagittis arcu cras ornare, amet a amet urna
-                vicras. Ipsum sociosqu. Mi consequat nec, per urna sed vitae mi
-                lectusn egestas, in consectetuer sed. Nunc id venenatis
+                {t("Provide.beneitsDesc")}
               </div>
               <ul className="provide__features-list list features">
-                <li className="features__item">
-                  Liver Function Tests. The Liver Function Tests (LFT)ed
-                </li>
-                <li className="features__item">Full Blood Examination.</li>
-                <li className="features__item">
-                  TSH (Thyroid Stimulating Hormone) Quantification Urinalysis.
-                </li>
-                <li className="features__item">
-                  INR (International Normalized Ratio)
-                </li>
+                {[1, 2, 3, 4].map((advantage) => (
+                  <li key={advantage} className="features__item">
+                    {t(`Provide.advantages.${advantage}` as any)}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
       </section>
-      <section className="plan plan--bg">
-        <div className="container">
-          <div className="plan__title title">
-            <div className="title__main">Choose Pricing Plan</div>
-            <p className="title__text">
-              Condimentum rutrum placerat egestas condimentum mi eros. Eleifend
-              cras quirntum Feugiat elit placerat. Diam tempor malesuada.
-            </p>
-          </div>
-          <ul className="plan__list list">
-            <li className="plan__item">
-              <div className="plan__header">
-                <div className="plan__name">Basic</div>
-                <div className="plan__price">
-                  57<span className="plan__postfix">/Month</span>
-                </div>
-              </div>
-              <ul className="plan__advantage-list list">
-                <li className="plan__advantage-item">Liver Function Tests.</li>
-                <li className="plan__advantage-item">
-                  Full Blood Examination.
-                </li>
-                <li className="plan__advantage-item">
-                  TSH (Thyroid Stimulating{" "}
-                </li>
-                <li className="plan__advantage-item">
-                  INR (International Normalized
-                </li>
-              </ul>
-              <a href="#" className="plan__link link">
-                buy now
-              </a>
-            </li>
-            <li className="plan__item">
-              <div className="plan__header">
-                <div className="plan__name">Standart</div>
-                <div className="plan__price">
-                  86<span className="plan__postfix">/Month</span>
-                </div>
-              </div>
-              <ul className="plan__advantage-list list">
-                <li className="plan__advantage-item">Liver Function Tests.</li>
-                <li className="plan__advantage-item">
-                  Full Blood Examination.
-                </li>
-                <li className="plan__advantage-item">
-                  TSH (Thyroid Stimulating{" "}
-                </li>
-                <li className="plan__advantage-item">
-                  INR (International Normalized
-                </li>
-              </ul>
-              <a href="#" className="plan__link link">
-                buy now
-              </a>
-            </li>
-            <li className="plan__item">
-              <div className="plan__header">
-                <div className="plan__name">Premium</div>
-                <div className="plan__price">
-                  98<span className="plan__postfix">/Yearly</span>
-                </div>
-              </div>
-              <ul className="plan__advantage-list list">
-                <li className="plan__advantage-item">Liver Function Tests.</li>
-                <li className="plan__advantage-item">
-                  Full Blood Examination.
-                </li>
-                <li className="plan__advantage-item">
-                  TSH (Thyroid Stimulating{" "}
-                </li>
-                <li className="plan__advantage-item">
-                  INR (International Normalized
-                </li>
-              </ul>
-              <a href="#" className="plan__link link">
-                buy now
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <PricingPlan className="plan--bg" />
       <section className="expirience">
         <div className="container">
           <div className="expirience__inner">
@@ -233,19 +131,15 @@ export default function About() {
             </div>
             <div className="expirience__description">
               <div className="expirience__description-title title title--special-2">
-                <div className="title__main">
-                  30 Years More Services Experiences
-                </div>
+                <div className="title__main">{t("Expirience.title")}</div>
               </div>
               <div className="expirience__text text">
-                Suspendisse nulla praesent, neque volutpat lacinia libero nullam
-                ut, in auctor nonummy mi augu massa ult tellus ut integer
-                ultrices facilisis semper.
+                {t("Expirience.desc")}
               </div>
               <ul className="expirience__progress-list list">
                 <li className="expirience__progress-item">
                   <div className="expirience__progress-name">
-                    Heart Surgery
+                    {t("Expirience.Progress.heart")}
                     <div className="expirience__progress-counter">
                       80<span className="expririence__postfix">%</span>
                     </div>
@@ -258,7 +152,7 @@ export default function About() {
                 </li>
                 <li className="expirience__progress-item">
                   <div className="expirience__progress-name">
-                    Laborate Analysis
+                    {t("Expirience.Progress.lab")}
                     <div className="expirience__progress-counter">
                       90<span className="expririence__postfix">%</span>
                     </div>
@@ -271,7 +165,7 @@ export default function About() {
                 </li>
                 <li className="expirience__progress-item">
                   <div className="expirience__progress-name">
-                    Customer Support
+                    {t("Expirience.Progress.support")}
                     <div className="expirience__progress-counter">
                       75<span className="expririence__postfix">%</span>
                     </div>
@@ -284,7 +178,7 @@ export default function About() {
                 </li>
                 <li className="expirience__progress-item">
                   <div className="expirience__progress-name">
-                    Medical Research
+                    {t("Expirience.Progress.research")}
                     <div className="expirience__progress-counter">
                       85<span className="expririence__postfix">%</span>
                     </div>
@@ -302,12 +196,12 @@ export default function About() {
       </section>
       <section className="newsletter">
         <div className="container">
-          <div className="newsletter__title">Singup For Our Newsletter</div>
+          <div className="newsletter__title">{t("signUp")}</div>
           <form className="newsletter__form">
             <input
               type="text"
               className="newsletter__input"
-              placeholder="Enter Your Email Address"
+              placeholder={t("signUpPlaceholder")}
             />
             <button
               className="newsletter__submit icon-paper-plane-o"
