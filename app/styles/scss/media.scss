@@ -79,6 +79,34 @@
 }
 
 @media (max-width: 992px) {
+  .header {
+    &__menu {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    &__info {
+      flex-direction: column;
+    }
+
+    &__info-icon {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    &__address-item {
+      text-align: center;
+      flex-direction: column;
+    }
+
+    &__address {
+      margin-right: 0;
+    }
+
+    &__logo-link {
+      margin: 0 auto 30px;
+    }
+  }
   .contact {
     &__inner {
       flex-direction: column;
@@ -585,6 +613,14 @@
       top: 85px;
     }
 
+    &__menu {
+      top: 30px;
+    }
+
+    &__nav {
+      margin: 20px 0 0;
+    }
+
     &__burger {
       display: block;
       margin: 0 auto;
@@ -658,6 +694,13 @@
 }
 
 @media (max-width: 576px) {
+  .header {
+    &__address {
+      grid-template-columns: 1fr;
+      gap: 0px;
+    }
+  }
+
   .error {
     padding-top: 0;
 
@@ -969,32 +1012,23 @@
 
     &__title {
       font-size: 50px;
-      margin-top: 120px;
-    }
-  }
-
-  .header {
-    &__menu {
-      padding-left: 10px;
-      padding-right: 10px;
+      word-break: break-all;
+      margin-top: 50px;
     }
 
-    &__info {
+    &__inner {
+      min-height: 550px;
+    }
+
+    &__links-container {
+      display: flex;
       flex-direction: column;
     }
 
-    &__info-icon {
+    &__link {
       margin-right: 0;
-      margin-bottom: 10px;
-    }
 
-    &__address-item {
-      text-align: center;
-      flex-direction: column;
-    }
-
-    &__logo-link {
-      margin: 0 auto 30px;
+      margin-bottom: 20px;
     }
   }
 
@@ -1003,6 +1037,7 @@
 
     &__main {
       font-size: 30px;
+      word-break: break-all;
     }
   }
 }

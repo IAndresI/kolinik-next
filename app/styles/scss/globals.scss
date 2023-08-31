@@ -1814,6 +1814,7 @@
   }
 
   &__button {
+    height: 100%;
     padding: 30px 10px;
     border: none;
     background-color: #ffffff;
@@ -2998,6 +2999,10 @@
     display: flex;
   }
 
+  &__description {
+    width: 100%;
+  }
+
   &__appointment {
     margin-right: 80px;
   }
@@ -3064,17 +3069,6 @@
     }
   }
 
-  &__answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: all 1s;
-
-    &--active {
-      max-height: 400px;
-      transition-delay: 0.9s;
-    }
-  }
-
   &__text {
     margin: 0 0 20px;
 
@@ -3126,6 +3120,10 @@
       background-color: $blue;
       color: #ffffff;
     }
+  }
+
+  &__accordion-item {
+    border-bottom: none;
   }
 
   &__accordion {

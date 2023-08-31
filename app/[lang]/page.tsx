@@ -6,16 +6,99 @@ import { CustomTabs } from "../components/tabs/CustomTabs";
 import { Count } from "../components/count/Count";
 import { useTranslations } from "next-intl";
 import { Services } from "../components/service/Services";
-import { OurDoctors } from "../components/doctors/OurDoctors";
+import {
+  IOurDoctorsProps,
+  OurDoctors,
+  SocialTypes,
+} from "../components/doctors/OurDoctors";
 import { PricingPlan } from "../components/plan/PricingPlan";
 import { News } from "../components/news/News";
-import {
-  Appointment,
-  AppointmentForm,
-} from "../components/appointment/AppointmentForm";
+import { AppointmentForm } from "../components/appointment/AppointmentForm";
 import { Sale } from "../components/sale/Sale";
 
 import doctorImage from "@/app/assets/appointment/doctor.png";
+import doctor1 from "@/app/assets/doctors/doctor1.png";
+import doctor2 from "@/app/assets/doctors/doctor2.png";
+import doctor3 from "@/app/assets/doctors/doctor3.png";
+
+const doctorsArr: {
+  image: string;
+  name: string;
+  department: string;
+  description: string;
+  link: string;
+  socials: {
+    type: SocialTypes;
+    link: string;
+  }[];
+}[] = [
+  {
+    image: doctor2.src,
+    name: "Marina Yigo",
+    department: "Gynecology",
+    description:
+      "Pharetra ultricies aenean, sit metus integer arcu turpis dndimentum pellentesque world.",
+    link: "#",
+    socials: [
+      {
+        type: "facebook",
+        link: "#",
+      },
+      {
+        type: "twitter",
+        link: "#",
+      },
+      {
+        type: "google",
+        link: "#",
+      },
+    ],
+  },
+  {
+    image: doctor3.src,
+    name: "Johan Makkelli",
+    department: "Physical Medicine",
+    description:
+      "Pharetra ultricies aenean, sit metus integer arcu turpis dndimentum pellentesque world.",
+    link: "#",
+    socials: [
+      {
+        type: "facebook",
+        link: "#",
+      },
+      {
+        type: "twitter",
+        link: "#",
+      },
+      {
+        type: "google",
+        link: "#",
+      },
+    ],
+  },
+  {
+    image: doctor1.src,
+    name: "Khaled Hossen",
+    department: "Gastoroenterology",
+    description:
+      "Pharetra ultricies aenean, sit metus integer arcu turpis dndimentum pellentesque world.",
+    link: "#",
+    socials: [
+      {
+        type: "facebook",
+        link: "#",
+      },
+      {
+        type: "twitter",
+        link: "#",
+      },
+      {
+        type: "google",
+        link: "#",
+      },
+    ],
+  },
+];
 
 export default function Home() {
   const t = useTranslations("Index");
@@ -91,7 +174,7 @@ export default function Home() {
         </div>
       </section>
       <Services />
-      <OurDoctors />
+      <OurDoctors doctors={doctorsArr} />
       <section className="department" id="department">
         <div className="container">
           <div className="department__title title title--special">

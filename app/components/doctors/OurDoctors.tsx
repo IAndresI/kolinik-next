@@ -5,10 +5,37 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
-interface IOurDoctorsProps {}
+export type SocialTypes = "facebook" | "twitter" | "google";
 
-export const OurDoctors = (props: IOurDoctorsProps) => {
-  const t = useTranslations("Index.OurExpert");
+export interface IOurDoctorsProps {
+  doctors: {
+    image: string;
+    name: string;
+    department: string;
+    description: string;
+    link: string;
+    socials: {
+      type: SocialTypes;
+      link: string;
+    }[];
+  }[];
+}
+
+const getSocialIconClass = (type: SocialTypes) => {
+  switch (type) {
+    case "facebook":
+      return "icon-facebook-f";
+    case "twitter":
+      return "doctors__link--azure icon-twitter";
+    case "google":
+      return "doctors__link--red icon-google-plus";
+    default:
+      return null;
+  }
+};
+
+export const OurDoctors = ({ doctors }: IOurDoctorsProps) => {
+  const t = useTranslations("OurExpertDoctors");
 
   return (
     <section className="doctors">
@@ -20,111 +47,36 @@ export const OurDoctors = (props: IOurDoctorsProps) => {
           </div>
         </div>
         <ul className="doctors__list list">
-          <li className="doctors__item">
-            <Link href="/doctors/1" className="doctors__image-container">
-              <Image
-                src={doctor1}
-                fill
-                alt="doctor image"
-                className="doctors__image"
-              />
-            </Link>
-            <Link href="/doctors/1" className="doctors__name">
-              <span className="doctors__prefix">Dr. </span>Marina Yigo
-            </Link>
-            <div className="doctors__post">Gastoroenterology, MBBS</div>
-            <div className="doctors__about">
-              Pharetra ultricies aenean, sit metus integer arcu turpis
-              dndimentum pellentesque world.
-            </div>
-            <ul className="doctors__social-list list">
-              <li className="doctors__social-item">
-                <a href="#" className="doctors__link icon-facebook-f link"></a>
-              </li>
-              <li className="doctors__social-item">
-                <a
-                  href="#"
-                  className="doctors__link doctors__link--azure icon-twitter link"
-                ></a>
-              </li>
-              <li className="doctors__social-item">
-                <a
-                  href="#"
-                  className="doctors__link doctors__link--red icon-google-plus link"
-                ></a>
-              </li>
-            </ul>
-          </li>
-          <li className="doctors__item">
-            <Link href="/doctors/1" className="doctors__image-container">
-              <Image
-                src={doctor2}
-                fill
-                alt="doctor image"
-                className="doctors__image"
-              />
-            </Link>
-            <Link href="/doctors/1" className="doctors__name">
-              <span className="doctors__prefix">Dr. </span>Marina Yigo
-            </Link>
-            <div className="doctors__post">Gastoroenterology, MBBS</div>
-            <div className="doctors__about">
-              Pharetra ultricies aenean, sit metus integer arcu turpis
-              dndimentum pellentesque world.
-            </div>
-            <ul className="doctors__social-list list">
-              <li className="doctors__social-item">
-                <a href="#" className="doctors__link icon-facebook-f link"></a>
-              </li>
-              <li className="doctors__social-item">
-                <a
-                  href="#"
-                  className="doctors__link doctors__link--azure icon-twitter link"
-                ></a>
-              </li>
-              <li className="doctors__social-item">
-                <a
-                  href="#"
-                  className="doctors__link doctors__link--red icon-google-plus link"
-                ></a>
-              </li>
-            </ul>
-          </li>
-          <li className="doctors__item">
-            <Link href="/doctors/1" className="doctors__image-container">
-              <Image
-                src={doctor3}
-                fill
-                alt="doctor image"
-                className="doctors__image"
-              />
-            </Link>
-            <Link href="/doctors/1" className="doctors__name">
-              <span className="doctors__prefix">Dr. </span>Marina Yigo
-            </Link>
-            <div className="doctors__post">Gastoroenterology, MBBS</div>
-            <div className="doctors__about">
-              Pharetra ultricies aenean, sit metus integer arcu turpis
-              dndimentum pellentesque world.
-            </div>
-            <ul className="doctors__social-list list">
-              <li className="doctors__social-item">
-                <a href="#" className="doctors__link icon-facebook-f link"></a>
-              </li>
-              <li className="doctors__social-item">
-                <a
-                  href="#"
-                  className="doctors__link doctors__link--azure icon-twitter link"
-                ></a>
-              </li>
-              <li className="doctors__social-item">
-                <a
-                  href="#"
-                  className="doctors__link doctors__link--red icon-google-plus link"
-                ></a>
-              </li>
-            </ul>
-          </li>
+          {doctors.map((doctor) => (
+            <li key={doctor.name} className="doctors__item">
+              <Link href={doctor.link} className="doctors__image-container">
+                <Image
+                  src={doctor.image}
+                  fill
+                  alt="doctor image"
+                  className="doctors__image"
+                />
+              </Link>
+              <Link href="/doctors/1" className="doctors__name">
+                <span className="doctors__prefix">Dr. </span>
+                {doctor.name}
+              </Link>
+              <div className="doctors__post">{doctor.department}</div>
+              <p className="doctors__about">{doctor.description}</p>
+              <ul className="doctors__social-list list">
+                {doctor.socials.map((social) => (
+                  <li key={social.link} className="doctors__social-item">
+                    <Link
+                      href={social.link}
+                      className={`doctors__link ${getSocialIconClass(
+                        social.type
+                      )} link`}
+                    ></Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
         </ul>
       </div>
     </section>

@@ -36,6 +36,34 @@
       "desc4": "Doctors specializing in the treatment of children from the first days of life to adulthood are receiving appointments in children's departments."
     }
   },
+  "OurDoctors": {
+    "title": "Our Doctors",
+
+    "Questions": {
+      "title": "Some Common Questions",
+      "list": {
+        "Choose": {
+          "title": "Why People Choose Us?",
+          "subTitle": "We are",
+          "text": "One of the largest networks of multidisciplinary medical centers for adults and children. The holding is in the top 5 private clinics according to Forbes, RBC, Vademecum and BusinesStat. We have been leading our history since 1993. Now we have 28 multidisciplinary clinics in Moscow, Moscow region, St. Petersburg, Ivanovo and Ryazan, which are open for you every day, including weekends and holidays."
+        },
+        "Mission": {
+          "title": "Our Mission & Vision?",
+          "subTitle": "Our Mission & Vision",
+          "text": "The safety and health of our patients is our top priority regardless of the epidemiological situation, but now it is especially important to ensure the full protection of our patients and prevent the spread of the pandemic."
+        },
+        "Service": {
+          "title": "How To Get Service?",
+          "subTitle": "Our service",
+          "text": "You can easily make an appointment by phone or just leave a request on the site! You can also just come to one of our centers, they will help you figure it out."
+        }
+      }
+    }
+  },
+  "OurExpertDoctors": {
+    "title": "Our Expert Doctor",
+    "subTitle": "Patients are treated by qualified doctors who have a long practice and wide knowledge in their field."
+  },
   "Index": {
     "Preview": {
       "title": "Meet with your best doctor here",
@@ -47,10 +75,7 @@
       "scheduleTime": "08:30 am to 05:00 pm",
       "email": "Email Address"
     },
-    "OurExpert": {
-      "title": "Our Expert Doctor",
-      "subTitle": "Patients are treated by qualified doctors who have a long practice and wide knowledge in their field."
-    },
+
     "OurDepartments": {
       "title": "Our Departments Best For You",
       "subTitle": "The medical center operates in the format of a global family clinic. The scope of our activities includes all types of medical care: diagnosis, treatment, recovery and prevention."
